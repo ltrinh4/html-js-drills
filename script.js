@@ -15,19 +15,29 @@
  */
 
 function addName() {
-  console.log('addName() ran');
-
+  console.log('addName()');
   // See:
   // - https://www.digitalocean.com/community/tutorials/js-innertext-and-innerhtml
   // - https://www.w3schools.com/jsref/prop_node_innertext.asp
 
   let nameElement = document.querySelector('#name');
-  nameElement.innerText = 'See script.js!';
+  nameElement.innerText = 'Lee Trinh and Cadie Beth';
 }
 
 function addFavoriteThings() {
   console.log('Called addFavoriteThings()');
 
+  let li = document.createElement('li');
+  li.textContent = 'Cats';
+  favthings.appendChild(li);
+
+  li = document.createElement('li');
+  li.textContent = 'Peaches';
+  favthings.appendChild(li);
+
+  li = document.createElement('li');
+  li.textContent = 'Pusheen';
+  favthings.appendChild(li);
   // 1. Get a reference to <ul id="favthings">
   // 2. Create a few list items representing your favorite things
   // 3. Add them to append them to favthings
@@ -40,7 +50,7 @@ function addFavoriteThings() {
 
 function replaceImage() {
   console.log('Called replaceImage()');
-
+document.getElementById("picture").src = "https://pusheen.com/wp-content/uploads/2020/04/How-well-do-you-know-Pusheen-and-co-12.jpg";
   // Change the puppy picture to a picture of your choosing
 
   // See:
@@ -50,6 +60,9 @@ function replaceImage() {
 
 function changeCodeStatus() {
   console.log('Called changeCodeStatus()');
+
+  let newMeme = document.querySelector('#codestatus');
+  newMeme.innerHTML = '<img src="https://i.pinimg.com/originals/85/7a/4e/857a4e343dc505463fb282d5b9a66acf.jpg"/>';
 
   // 1. Get a reference to <div id="codestatus">
   // 2. Create image element containing a sweet ol' meme
@@ -87,8 +100,33 @@ let informationForm = document.querySelector('#information-form');
 // Do something when form is submitted
 informationForm.addEventListener('submit', function(event) {
   event.preventDefault(); // You will want this here. Remove it and see what changes.
+ //first name
+  var nameValue = document.getElementById("fname").value;
+  firstname.innerHTML = nameValue;
+// last name
+  var nameValue2 = document.getElementById("lname").value;
+  lastname.innerHTML = nameValue2;
+//cars
+  var nameValue3 = document.getElementById("cars").value;
+  cars = document.querySelector('#chosencar');
+  cars.innerText = nameValue3;
+//ice cream
+  var nameValue4 = document.querySelector('input[name=icecream]:checked').value;
+  //console.log(nameValue4);
 
-  console.log('Form submitted');
+  icecream = document.querySelector('#icecreamstatus');
+  icecream.innerText = nameValue4;
+// checkboxes
+var nameValue5 = document.querySelector('.form-check-input:checked').value;
+console.log(nameValue5);
+
+  console.log(nameValue);
+
+  firstname = document.querySelector('#firstname');
+
+  lastname = document.querySelector('#lastname');
+
+
 
   // Your job:
   //   1. Get information typed into the form

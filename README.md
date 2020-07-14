@@ -11,3 +11,5 @@ Focus on the Javascript.  There will be research involved.
 Go to the script.js file and read the comments, they will tell you what you need to do.
 
 Good luck!
+
+hello
